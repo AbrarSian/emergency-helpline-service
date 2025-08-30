@@ -39,7 +39,7 @@ copyBtns.forEach((btn, index) => {
         let copyBox = getInnerTextIntoNum("copy_box");
         let newText = copyBox + 1 + " " + "copy";
         document.getElementById("copy_box").children[0].innerText = newText;
-        let copyNum = number[index];
+        let copyNum = numbers[index];
         navigator.clipboard.writeText(copyNum);
         alert("Hotline number copied successfully 😊");
     });
@@ -79,11 +79,10 @@ callBtn.forEach((btn, index) => {
               <p class="text-sm">${date}</p>
             </div></div>`
     historyList.appendChild(newChild)
-    let clearBtn = document.getElementById('clear_btn')
-    clearBtn.addEventListener('click',function(){
-         document.getElementById("history_list").innerHTML = "";
-        newChild.style.display = 'block'
     })
   });
+  let clearBtn = document.getElementById('clear_btn')
+clearBtn.addEventListener('click',function(){
+     document.getElementById("history_list").innerHTML = "";
 });
 
