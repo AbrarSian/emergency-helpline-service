@@ -41,7 +41,7 @@ copyBtns.forEach((btn, index) => {
         document.getElementById("copy_box").children[0].innerText = newText;
         let copyNum = number[index];
         navigator.clipboard.writeText(copyNum);
-        alert("Hotline number copied successfully");
+        alert("Hotline number copied successfully 😊");
     });
 });
 
@@ -55,7 +55,7 @@ callBtn.forEach((btn, index) => {
   btn.addEventListener("click", function () {
     let textNum = getInnerTextIntoNum("coin_box");
     if (textNum <= 0) {
-      alert(" Sorry! Out of coin");
+      alert(" Sorry! you reached your limit 😔");
       return;
     }
     let name = serviceName[index];
@@ -79,11 +79,11 @@ callBtn.forEach((btn, index) => {
               <p class="text-sm">${date}</p>
             </div></div>`
     historyList.appendChild(newChild)
+    let clearBtn = document.getElementById('clear_btn')
+    clearBtn.addEventListener('click',function(){
+         document.getElementById("history_list").innerHTML = "";
+        newChild.style.display = 'block'
+    })
   });
 });
 
-let history = {
-    service:"ফায়ার সার্ভিস",
-    date : new Date().toLocaleTimeString()
-}
-console.log(history)
