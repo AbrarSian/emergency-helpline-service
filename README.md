@@ -9,7 +9,7 @@
 
 ** How do you create and insert a new element into the DOM?
  *  let div = document.createElement('div')
-    div.innerHTML = "<h1> Assalamualaikum </h1>"
+    div.innerHTML = "<p> Assalamualaikum <p>"
     document.body.appendChild(div);
 
     In this way,we can add new element to the DOM.
